@@ -1,0 +1,10 @@
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\bin\Debug\EjercicioForeach.exe.config
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\bin\Debug\EjercicioForeach.exe
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\bin\Debug\EjercicioForeach.pdb
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\obj\Debug\EjercicioForeach.csproj.AssemblyReference.cache
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\obj\Debug\EjercicioForeach.Form1.resources
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\obj\Debug\EjercicioForeach.Properties.Resources.resources
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\obj\Debug\EjercicioForeach.csproj.GenerateResource.cache
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\obj\Debug\EjercicioForeach.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\obj\Debug\EjercicioForeach.exe
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioForeach\EjercicioForeach\obj\Debug\EjercicioForeach.pdb

@@ -1,0 +1,8 @@
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\bin\Debug\Ejercicio3Struct.exe.config
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\bin\Debug\Ejercicio3Struct.exe
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\bin\Debug\Ejercicio3Struct.pdb
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\obj\Debug\Ejercicio3Struct.csproj.AssemblyReference.cache
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\obj\Debug\Ejercicio3Struct.csproj.SuggestedBindingRedirects.cache
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\obj\Debug\Ejercicio3Struct.csproj.CoreCompileInputs.cache
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\obj\Debug\Ejercicio3Struct.exe
+E:\source\repos\Ejercicio3Struct\Ejercicio3Struct\obj\Debug\Ejercicio3Struct.pdb
