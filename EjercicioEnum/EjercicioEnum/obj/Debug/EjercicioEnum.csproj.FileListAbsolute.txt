@@ -1,0 +1,7 @@
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioEnum\EjercicioEnum\bin\Debug\EjercicioEnum.exe.config
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioEnum\EjercicioEnum\bin\Debug\EjercicioEnum.exe
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioEnum\EjercicioEnum\bin\Debug\EjercicioEnum.pdb
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioEnum\EjercicioEnum\obj\Debug\EjercicioEnum.csproj.AssemblyReference.cache
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioEnum\EjercicioEnum\obj\Debug\EjercicioEnum.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioEnum\EjercicioEnum\obj\Debug\EjercicioEnum.exe
+C:\Users\Estudiante\source\repos\Ejercicios de clase\EjercicioEnum\EjercicioEnum\obj\Debug\EjercicioEnum.pdb
