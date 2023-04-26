@@ -1,0 +1,11 @@
+E:\source\repos\Universidad\Universidad\bin\Release\Universidad.exe.config
+E:\source\repos\Universidad\Universidad\bin\Release\Universidad.exe
+E:\source\repos\Universidad\Universidad\bin\Release\Universidad.pdb
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.csproj.AssemblyReference.cache
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.csproj.SuggestedBindingRedirects.cache
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.Form1.resources
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.Properties.Resources.resources
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.csproj.GenerateResource.cache
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.csproj.CoreCompileInputs.cache
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.exe
+E:\source\repos\Universidad\Universidad\obj\Release\Universidad.pdb

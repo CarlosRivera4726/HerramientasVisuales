@@ -1,0 +1,15 @@
+E:\source\repos\Enumerable\Enumerable\bin\Debug\net6.0\Enumerable.exe
+E:\source\repos\Enumerable\Enumerable\bin\Debug\net6.0\Enumerable.deps.json
+E:\source\repos\Enumerable\Enumerable\bin\Debug\net6.0\Enumerable.runtimeconfig.json
+E:\source\repos\Enumerable\Enumerable\bin\Debug\net6.0\Enumerable.dll
+E:\source\repos\Enumerable\Enumerable\bin\Debug\net6.0\Enumerable.pdb
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.csproj.AssemblyReference.cache
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.GeneratedMSBuildEditorConfig.editorconfig
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.AssemblyInfoInputs.cache
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.AssemblyInfo.cs
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.csproj.CoreCompileInputs.cache
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.dll
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\refint\Enumerable.dll
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.pdb
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\Enumerable.genruntimeconfig.cache
+E:\source\repos\Enumerable\Enumerable\obj\Debug\net6.0\ref\Enumerable.dll
