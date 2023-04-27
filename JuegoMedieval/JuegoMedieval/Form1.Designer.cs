@@ -93,7 +93,6 @@ namespace JuegoMedieval
             // 
             // movementPlayer
             // 
-            this.movementPlayer.Interval = 1000;
             this.movementPlayer.Tick += new System.EventHandler(this.movementPlayer_Tick);
             // 
             // paredDerechaCompleta

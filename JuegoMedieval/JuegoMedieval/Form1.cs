@@ -9,13 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharpDX.DirectWrite;
 
 namespace JuegoMedieval
 {
     public partial class Form1 : Form
     {
         private static int PASOS_JUGADOR = 12;
-        private static int SALTOS_JUGADOR = 90;
+        private static int SALTOS_JUGADOR = 35;
+        // limitamos los saltos dados! min-> 1 max-> 2
+        private static int min_saltos = 1;
+        private static int max_saltos = 3;
+        private int contSaltos = 0;
         public Form1()
         {
             InitializeComponent();
@@ -29,57 +34,94 @@ namespace JuegoMedieval
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             
-            if (e.KeyCode == Keys.A)
+            if (e.KeyCode == Keys.A || e.KeyCode == Keys.Left)
             {
                 jugador.Left -= PASOS_JUGADOR;
                 jugador.Image = JuegoMedieval.Properties.Resources.caminando_espalda_izq;
 
             }
-            if(e.KeyCode == Keys.D)
+            if(e.KeyCode == Keys.D || e.KeyCode == Keys.Right)
             {
                 jugador.Left += PASOS_JUGADOR;
                 jugador.Image = JuegoMedieval.Properties.Resources.caminando_espalda_derecha;
             }
 
-            if (e.KeyCode == Keys.S)
+            if (e.KeyCode == Keys.S || e.KeyCode == Keys.Down)
             {
-                jugador.Top += SALTOS_JUGADOR-40;
+                jugador.Top += SALTOS_JUGADOR/4;
                 jugador.Image = JuegoMedieval.Properties.Resources.caminando_espalda_izq;
-                colicionEscalones();
 
+                colisionEscalones(escalon1);
+                colisionEscalones(escalon2);
+                colisionEscalones(escalon3);
+                colisionEscalones(escalon4);
+                colisionPiso(piso);
             }
 
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
-                jugador.Top -= SALTOS_JUGADOR;
-                jugador.Image = JuegoMedieval.Properties.Resources.saltando_espalda_derecha;
-                
-                colicionEscalones();
+                contSaltos++;
+                if(contSaltos >= min_saltos && contSaltos <= max_saltos) {
+
+                    jugador.Top -= SALTOS_JUGADOR;
+                    jugador.Image = JuegoMedieval.Properties.Resources.saltando_espalda_derecha;
+
+                    colisionEscalones(escalon1);
+                    colisionEscalones(escalon2);
+                    colisionEscalones(escalon3);
+                    colisionEscalones(escalon4);
+                }
+                else
+                {
+                    MessageBox.Show("Superaste el # de saltos");
+                    movementPlayer.Enabled = true;
+                    contSaltos = 0;
+                }
+
             }
 
             colicionParedes();
 
         }
-        private void colicionEscalones()
+
+        #region COLISION ESCALONES
+        private void colisionEscalones(PictureBox escalon)
         {
-            int widthJugador = jugador.Bounds.Width;
-            int posXJugador = jugador.Bounds.X;
-            int posYJugador = jugador.Bounds.Y;
-
-            int widthEscalon1 = escalon1.Bounds.Width;
-            int heightEscalon1 = escalon1.Bounds.Height;
-
-            int posXEscalon1 = escalon1.Bounds.X;
-            int posYEscalon1 = escalon1.Bounds.Y;
-
-            bool posX = (posXJugador + widthJugador) >= posXEscalon1 && (posXJugador + widthJugador) >= posXEscalon1 + widthEscalon1;
-            bool posY = (posYJugador >= posYEscalon1 && posYJugador < posYEscalon1 + heightEscalon1);
-            if (posX && posY)
+            if (jugador.Bounds.IntersectsWith(escalon.Bounds))
             {
-                MessageBox.Show("OOPS!");
+                if (jugador.Bottom >= escalon.Top)
+                {
+                    Console.WriteLine("TOCO LA PARTE DE ARRIBA DEL ESCALON");
+                    jugador.Location = new Point(escalon.Bounds.X+20, escalon.Bounds.Y - 60);
+                    contSaltos = 0;
+                    movementPlayer.Enabled = false;
+                    return;
+                }
+                if (jugador.Top < escalon.Bottom)
+                {
+                    Console.WriteLine("TOCO LA PARTE DE ABAJO DEL ESCALON");
+
+                    jugador.Location = new Point(escalon.Bounds.X - 20, escalon.Bounds.Y);
+                }
+
+            }
+            else
+            {
+                // verificamos que este en un espacio libre
+            }
+           // if()
+        }
+        #endregion
+        private void colisionPiso(PictureBox piso)
+        {
+            if (jugador.Bounds.IntersectsWith(piso.Bounds))
+            {
+                movementPlayer.Enabled = false;
+                jugador.Location = new Point(piso.Location.X+20, jugador.Location.Y - 20);
             }
         }
 
+        #region colicionParedes
         private void colicionParedes()
         {
             if (jugador.Bounds.IntersectsWith(paredDerechaEscalon1.Bounds))
@@ -101,34 +143,32 @@ namespace JuegoMedieval
 
             }
 
-            if (jugador.Bounds.IntersectsWith(piso.Bounds))
-            {
-                movementPlayer.Enabled = false;
-                jugador.Image = JuegoMedieval.Properties.Resources.caminando_espalda_derecha;
-                jugador.Location = new Point(paredIzquierdaCompleta.Location.X + 20, jugador.Location.Y + 2);
-
-                // Verificar si el jugador ha tocado el piso
-                if (jugador.Top < piso.Top)
-                {
-                    // Establecer la posición del jugador en el piso
-                    jugador.Top = piso.Top - jugador.Height;
-                }
-            }
+            
             Console.WriteLine("Posicion del Jugador (X,Y): " + jugador.Location);
 
         }
+        #endregion
         // para imprimir las posiciones de las paredes necesarias, ademas de la posicion del jugador
+
+        #region MOVEMENT_TICK
+        private void movementPlayer_Tick(object sender, EventArgs e)
+        {
+            jugador.Top += SALTOS_JUGADOR/2;
+            colisionEscalones(escalon1);
+            colisionEscalones(escalon2);
+            colisionEscalones(escalon3);
+            colisionEscalones(escalon4);
+            colisionPiso(piso);
+        }
+        #endregion
+
+        #region DEBUG
         private void debugeoPorConsola()
         {
             Console.WriteLine("Posicion pared izq: " + paredIzquierdaCompleta.Location);
             Console.WriteLine("Posicion pared Derecha: " + paredDerechaEscalon1.Location);
             Console.WriteLine("Posicion Jugador : " + jugador.Location);
         }
-
-        private void movementPlayer_Tick(object sender, EventArgs e)
-        {
-            jugador.Top += SALTOS_JUGADOR-40;
-            colicionEscalones();
-        }
+        #endregion
     }
 }

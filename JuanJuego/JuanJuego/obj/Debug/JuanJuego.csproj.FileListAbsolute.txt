@@ -1,0 +1,11 @@
+E:\source\repos\JuanJuego\JuanJuego\bin\Debug\JuanJuego.exe.config
+E:\source\repos\JuanJuego\JuanJuego\bin\Debug\JuanJuego.exe
+E:\source\repos\JuanJuego\JuanJuego\bin\Debug\JuanJuego.pdb
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.csproj.AssemblyReference.cache
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.csproj.SuggestedBindingRedirects.cache
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.Form1.resources
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.Properties.Resources.resources
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.csproj.GenerateResource.cache
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.csproj.CoreCompileInputs.cache
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.exe
+E:\source\repos\JuanJuego\JuanJuego\obj\Debug\JuanJuego.pdb
