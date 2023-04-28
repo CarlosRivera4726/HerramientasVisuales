@@ -124,14 +124,14 @@
   <data name="Mapa_saltos_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mapa_saltos_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saltando_espalda_derecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saltando_espalda_derecha.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="muerte_espalda_izquierda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muerte_espalda_izquierda.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="muerte_frente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muerte_frente.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caminando_espalda_derecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caminando_espalda_derecha.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="movimiento_ataque_espalda_dercha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\movimiento_ataque_espalda_dercha.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,13 +145,16 @@
   <data name="saltando_espalda_izq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saltando_espalda_izq.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="output-onlinegiftools - copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\output-onlinegiftools - copia.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="muerte_espalda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muerte_espalda.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="caminando_espalda_derecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caminando_espalda_derecha.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="saltando_espalda_derecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saltando_espalda_derecha.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="output-onlinegiftools - copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\output-onlinegiftools - copia.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

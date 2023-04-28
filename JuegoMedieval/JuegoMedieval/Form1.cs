@@ -112,7 +112,7 @@ namespace JuegoMedieval
                 if (jugador.Bottom >= escalon.Top)
                 {
                     Console.WriteLine("TOCO LA PARTE DE ARRIBA DEL ESCALON");
-                    jugador.Location = new Point(escalon.Bounds.X+20, escalon.Bounds.Y - 60);
+                    jugador.Location = new Point(escalon.Bounds.X + 20, escalon.Bounds.Y - 60);
                     contSaltos = 0;
                     movementPlayer.Enabled = false;
                     return;
@@ -124,9 +124,12 @@ namespace JuegoMedieval
                 }
 
             }
-            else
+            else if(contSaltos == max_saltos)
             {
+                
                 // verificamos que este en un espacio libre
+                movementPlayer.Enabled = true;
+                
             }
            // if()
         }
@@ -187,12 +190,31 @@ namespace JuegoMedieval
             Console.WriteLine("Localizacion: " + localizacion.Location);
         }
         #endregion
-
+        int contCorazon = 0;
         private void perdido()
         {
             if (enemy1.Bounds.IntersectsWith(jugador.Bounds))
             {
-                MessageBox.Show("has perdido", "Loss", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                contCorazon++;
+
+                if (contCorazon == 1)
+                {
+                    corazon1.Visible = false;
+
+                }
+                if (contCorazon == 2)
+                {
+                    corazon2.Visible = false;
+                }
+                if (contCorazon == 3)
+                {
+                    corazon3.Visible = false;
+                }
+                if (contCorazon > 3)
+                {
+                    contCorazon = 0;
+                    MessageBox.Show("Perdiste");
+                }
                 jugador.Location = new Point(posXJugador, posYJugador);
             }
         }

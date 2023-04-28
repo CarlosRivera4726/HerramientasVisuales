@@ -47,6 +47,9 @@ namespace JuegoMedieval
             this.movementEnemy_right_1 = new System.Windows.Forms.Timer(this.components);
             this.lblPuntaje = new System.Windows.Forms.Label();
             this.enemy2 = new System.Windows.Forms.PictureBox();
+            this.corazon2 = new System.Windows.Forms.PictureBox();
+            this.corazon1 = new System.Windows.Forms.PictureBox();
+            this.corazon3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.jugador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paredDerechaEscalon1)).BeginInit();
@@ -58,6 +61,9 @@ namespace JuegoMedieval
             ((System.ComponentModel.ISupportInitialize)(this.escalon4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazon1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazon3)).BeginInit();
             this.SuspendLayout();
             // 
             // jugador
@@ -171,7 +177,7 @@ namespace JuegoMedieval
             // lblPuntaje
             // 
             this.lblPuntaje.AutoSize = true;
-            this.lblPuntaje.Location = new System.Drawing.Point(45, 523);
+            this.lblPuntaje.Location = new System.Drawing.Point(29, 522);
             this.lblPuntaje.Name = "lblPuntaje";
             this.lblPuntaje.Size = new System.Drawing.Size(49, 13);
             this.lblPuntaje.TabIndex = 10;
@@ -188,6 +194,36 @@ namespace JuegoMedieval
             this.enemy2.TabIndex = 11;
             this.enemy2.TabStop = false;
             // 
+            // corazon2
+            // 
+            this.corazon2.Image = global::JuegoMedieval.Properties.Resources.unnamed;
+            this.corazon2.Location = new System.Drawing.Point(199, 519);
+            this.corazon2.Name = "corazon2";
+            this.corazon2.Size = new System.Drawing.Size(19, 17);
+            this.corazon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.corazon2.TabIndex = 12;
+            this.corazon2.TabStop = false;
+            // 
+            // corazon1
+            // 
+            this.corazon1.Image = global::JuegoMedieval.Properties.Resources.unnamed;
+            this.corazon1.Location = new System.Drawing.Point(174, 519);
+            this.corazon1.Name = "corazon1";
+            this.corazon1.Size = new System.Drawing.Size(19, 17);
+            this.corazon1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.corazon1.TabIndex = 13;
+            this.corazon1.TabStop = false;
+            // 
+            // corazon3
+            // 
+            this.corazon3.Image = global::JuegoMedieval.Properties.Resources.unnamed;
+            this.corazon3.Location = new System.Drawing.Point(224, 519);
+            this.corazon3.Name = "corazon3";
+            this.corazon3.Size = new System.Drawing.Size(19, 17);
+            this.corazon3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.corazon3.TabIndex = 14;
+            this.corazon3.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,6 +231,9 @@ namespace JuegoMedieval
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(112)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(267, 555);
+            this.Controls.Add(this.corazon3);
+            this.Controls.Add(this.corazon1);
+            this.Controls.Add(this.corazon2);
             this.Controls.Add(this.enemy2);
             this.Controls.Add(this.lblPuntaje);
             this.Controls.Add(this.enemy1);
@@ -222,6 +261,9 @@ namespace JuegoMedieval
             ((System.ComponentModel.ISupportInitialize)(this.escalon4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazon1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazon3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +286,9 @@ namespace JuegoMedieval
         private System.Windows.Forms.Timer movementEnemy_right_1;
         private System.Windows.Forms.Label lblPuntaje;
         private System.Windows.Forms.PictureBox enemy2;
+        private System.Windows.Forms.PictureBox corazon2;
+        private System.Windows.Forms.PictureBox corazon1;
+        private System.Windows.Forms.PictureBox corazon3;
     }
 }
 
