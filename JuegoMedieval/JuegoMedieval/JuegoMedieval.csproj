@@ -120,5 +120,11 @@
   <ItemGroup>
     <None Include="Resources\Mapa_saltos_1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinegiftools - copia.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

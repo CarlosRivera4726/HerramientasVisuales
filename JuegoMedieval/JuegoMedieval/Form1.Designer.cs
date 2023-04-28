@@ -42,6 +42,11 @@ namespace JuegoMedieval
             this.escalon2 = new System.Windows.Forms.PictureBox();
             this.escalon3 = new System.Windows.Forms.PictureBox();
             this.escalon4 = new System.Windows.Forms.PictureBox();
+            this.enemy1 = new System.Windows.Forms.PictureBox();
+            this.movementEnemy_left_1 = new System.Windows.Forms.Timer(this.components);
+            this.movementEnemy_right_1 = new System.Windows.Forms.Timer(this.components);
+            this.lblPuntaje = new System.Windows.Forms.Label();
+            this.enemy2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.jugador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paredDerechaEscalon1)).BeginInit();
@@ -51,6 +56,8 @@ namespace JuegoMedieval
             ((System.ComponentModel.ISupportInitialize)(this.escalon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escalon3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.escalon4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             this.SuspendLayout();
             // 
             // jugador
@@ -140,6 +147,47 @@ namespace JuegoMedieval
             this.escalon4.TabIndex = 8;
             this.escalon4.TabStop = false;
             // 
+            // enemy1
+            // 
+            this.enemy1.BackColor = System.Drawing.Color.Transparent;
+            this.enemy1.Image = global::JuegoMedieval.Properties.Resources.output_onlinegiftools;
+            this.enemy1.Location = new System.Drawing.Point(181, 335);
+            this.enemy1.Name = "enemy1";
+            this.enemy1.Size = new System.Drawing.Size(41, 61);
+            this.enemy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enemy1.TabIndex = 9;
+            this.enemy1.TabStop = false;
+            // 
+            // movementEnemy_left_1
+            // 
+            this.movementEnemy_left_1.Interval = 1000;
+            this.movementEnemy_left_1.Tick += new System.EventHandler(this.movementEnemy_left_1_Tick);
+            // 
+            // movementEnemy_right_1
+            // 
+            this.movementEnemy_right_1.Interval = 1000;
+            this.movementEnemy_right_1.Tick += new System.EventHandler(this.movementEnemy_right_1_Tick);
+            // 
+            // lblPuntaje
+            // 
+            this.lblPuntaje.AutoSize = true;
+            this.lblPuntaje.Location = new System.Drawing.Point(45, 523);
+            this.lblPuntaje.Name = "lblPuntaje";
+            this.lblPuntaje.Size = new System.Drawing.Size(49, 13);
+            this.lblPuntaje.TabIndex = 10;
+            this.lblPuntaje.Text = "Puntaje: ";
+            // 
+            // enemy2
+            // 
+            this.enemy2.BackColor = System.Drawing.Color.Transparent;
+            this.enemy2.Image = global::JuegoMedieval.Properties.Resources.output_onlinegiftools___copia;
+            this.enemy2.Location = new System.Drawing.Point(32, 224);
+            this.enemy2.Name = "enemy2";
+            this.enemy2.Size = new System.Drawing.Size(41, 60);
+            this.enemy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enemy2.TabIndex = 11;
+            this.enemy2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +195,9 @@ namespace JuegoMedieval
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(112)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(267, 555);
+            this.Controls.Add(this.enemy2);
+            this.Controls.Add(this.lblPuntaje);
+            this.Controls.Add(this.enemy1);
             this.Controls.Add(this.escalon4);
             this.Controls.Add(this.escalon3);
             this.Controls.Add(this.escalon2);
@@ -169,7 +220,10 @@ namespace JuegoMedieval
             ((System.ComponentModel.ISupportInitialize)(this.escalon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escalon3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.escalon4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -185,6 +239,11 @@ namespace JuegoMedieval
         private System.Windows.Forms.PictureBox escalon2;
         private System.Windows.Forms.PictureBox escalon3;
         private System.Windows.Forms.PictureBox escalon4;
+        private System.Windows.Forms.PictureBox enemy1;
+        private System.Windows.Forms.Timer movementEnemy_left_1;
+        private System.Windows.Forms.Timer movementEnemy_right_1;
+        private System.Windows.Forms.Label lblPuntaje;
+        private System.Windows.Forms.PictureBox enemy2;
     }
 }
 

@@ -15,6 +15,9 @@ namespace JuegoMedieval
 {
     public partial class Form1 : Form
     {
+        private static int posXJugador = 0;
+        private static int posYJugador = 0;
+        private int puntaje = 0;
         private static int PASOS_JUGADOR = 12;
         private static int SALTOS_JUGADOR = 35;
         // limitamos los saltos dados! min-> 1 max-> 2
@@ -24,6 +27,9 @@ namespace JuegoMedieval
         public Form1()
         {
             InitializeComponent();
+            movementEnemy_left_1.Enabled = true;
+            posXJugador = jugador.Location.X;
+            posYJugador = jugador.Location.Y;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -58,7 +64,7 @@ namespace JuegoMedieval
                 colisionPiso(piso);
             }
 
-            if (e.KeyCode == Keys.Space || e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
                 contSaltos++;
                 if(contSaltos >= min_saltos && contSaltos <= max_saltos) {
@@ -79,6 +85,20 @@ namespace JuegoMedieval
                 }
 
             }
+            if (e.KeyCode == Keys.Space)
+            {
+                jugador.Image = JuegoMedieval.Properties.Resources.movimiento_ataque_espalda_dercha;
+                if (jugador.Bounds.IntersectsWith(enemy1.Bounds))
+                {
+                    puntaje++;
+                    lblPuntaje.Text = "Puntaje: " + puntaje;
+                    enemy1.Enabled = false;
+                    enemy1.Visible = false;
+                    movementEnemy_left_1.Enabled = false;
+                    movementEnemy_right_1.Enabled = false;
+                }
+                contSaltos = 0;
+            }
 
             colicionParedes();
 
@@ -97,11 +117,10 @@ namespace JuegoMedieval
                     movementPlayer.Enabled = false;
                     return;
                 }
-                if (jugador.Top < escalon.Bottom)
+                if (jugador.Top <= escalon.Bottom)
                 {
                     Console.WriteLine("TOCO LA PARTE DE ABAJO DEL ESCALON");
 
-                    jugador.Location = new Point(escalon.Bounds.X - 20, escalon.Bounds.Y);
                 }
 
             }
@@ -117,7 +136,7 @@ namespace JuegoMedieval
             if (jugador.Bounds.IntersectsWith(piso.Bounds))
             {
                 movementPlayer.Enabled = false;
-                jugador.Location = new Point(piso.Location.X+20, jugador.Location.Y - 20);
+                jugador.Location = new Point(piso.Location.X+20, jugador.Location.Y - 15);
             }
         }
 
@@ -163,12 +182,48 @@ namespace JuegoMedieval
         #endregion
 
         #region DEBUG
-        private void debugeoPorConsola()
+        private void debugeoPorConsola(PictureBox localizacion)
         {
-            Console.WriteLine("Posicion pared izq: " + paredIzquierdaCompleta.Location);
-            Console.WriteLine("Posicion pared Derecha: " + paredDerechaEscalon1.Location);
-            Console.WriteLine("Posicion Jugador : " + jugador.Location);
+            Console.WriteLine("Localizacion: " + localizacion.Location);
         }
         #endregion
+
+        private void perdido()
+        {
+            if (enemy1.Bounds.IntersectsWith(jugador.Bounds))
+            {
+                MessageBox.Show("has perdido", "Loss", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                jugador.Location = new Point(posXJugador, posYJugador);
+            }
+        }
+        private void movementEnemy_left_1_Tick(object sender, EventArgs e)
+        {
+            //debugeoPorConsola(enemy1);
+            enemy1.Left -= 8;
+            if(enemy1.Location.X <= 101)
+            {
+                movementEnemy_right_1.Enabled = true;
+                movementEnemy_left_1.Enabled = false;
+                enemy1.Image = JuegoMedieval.Properties.Resources.output_onlinegiftools___copia;
+            }
+            perdido();
+            
+        }
+        // Paint it black
+
+        private void movementEnemy_right_1_Tick(object sender, EventArgs e)
+        {
+            //debugeoPorConsola(enemy1);
+            enemy1.Left += 8;
+            if(enemy1.Location.X >= 173)
+            {
+                movementEnemy_right_1.Enabled = false;
+                movementEnemy_left_1.Enabled = true;
+                enemy1.Image = JuegoMedieval.Properties.Resources.output_onlinegiftools;
+            }
+
+            perdido();
+
+        }
     }
 }

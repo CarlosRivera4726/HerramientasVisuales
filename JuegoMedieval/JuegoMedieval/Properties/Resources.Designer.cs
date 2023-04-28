@@ -143,6 +143,26 @@ namespace JuegoMedieval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_onlinegiftools {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinegiftools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinegiftools___copia {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinegiftools - copia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap saltando_espalda_derecha {
             get {
                 object obj = ResourceManager.GetObject("saltando_espalda_derecha", resourceCulture);
